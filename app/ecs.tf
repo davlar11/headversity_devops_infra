@@ -43,13 +43,13 @@ resource "aws_ecs_service" "app" {
   launch_type     = "FARGATE"
 
   network_configuration {
-    subnets          = var.subnet_ids
-    security_groups  = [var.security_group_id]
+    subnets         = var.subnet_ids
+    security_groups = [var.security_group_id]
   }
 }
 
 resource "aws_ecs_cluster" "app" {
-  name = "app"
+  name               = "app"
   capacity_providers = ["FARGATE_SPOT"]
 
   default_capacity_provider_strategy {
