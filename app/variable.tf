@@ -15,3 +15,5 @@ variable "container_name" {}
 variable "desired_count" {}
 
 variable "vpc_id" {}
+
+variable "assign_public_ip" {}

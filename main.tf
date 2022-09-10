@@ -18,4 +18,5 @@ module "app" {
   subnet_ids        = module.network.public_subnet_ids
   desired_count     = "1"
   vpc_id            = module.network.vpc_id
+  assign_public_ip  = "true"
 }
