@@ -36,7 +36,7 @@ EOF
 
 # Service resource without load balancer
 resource "aws_ecs_service" "app" {
-  name            = "${var.environment}-${var.container_name}"
+  name            = var.container_name
   cluster         = aws_ecs_cluster.app.id
   task_definition = aws_ecs_task_definition.app.arn
   desired_count   = var.desired_count
